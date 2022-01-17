@@ -1,0 +1,255 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+@import url(https://fonts.googleapis.com/css?family=Nunito:400,700);
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+button{
+  cursor: pointer;
+}
+
+/* INICIO */
+.inicio{
+  width: 100%;
+  min-height: 100vh;
+  background: #F8F005;
+  padding: 0 2rem 2rem 2rem;
+  display: grid;
+  place-content: center;
+}
+.logo{
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.logo img{
+  margin: 3rem 0;
+  width: 18rem;
+}
+.inicio-content-wrap{
+  max-width: 50rem;
+  margin: auto;
+}
+.inicio-btns-wrap{
+  display: flex;
+  gap: 1rem 0;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-end;
+}
+.btn-inicio,.link-inicio, .btn-inicio::after, .link-inicio::after {
+  width: 14rem;
+  height: 3.5rem;
+  font-size: 27px;
+  font-family: 'Oswald', cursive;
+  font-weight: 700;
+  background: linear-gradient(45deg, transparent 5%, #ff013c 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00e6f6;
+  outline: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.instrucoes{
+  background-color: #f8f0e1;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+.instrucoes h3{
+  color: #111111;
+  font-weight: 500;
+}
+.instrucoes span{
+  font-weight: 700;
+}
+
+
+/* JOGO */
+.jogo{
+  width: 100%;
+  min-height: 100vh;
+  background: #F8F005;
+  padding: 4rem 2rem 2rem 2rem;
+}
+.jogo-content-wrap{
+  max-width: 50rem;
+  margin: auto;
+}
+.jogo-content{
+  background-color: #f8f0e1;
+  border-radius: 4rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #111111;
+}
+.jogo-content h1{
+  font-size: 4em;
+}
+.jogo-content p{
+  margin-top: 2rem;
+  font-weight: 700;
+}
+.btns-wrap-jogo{
+  display: flex;
+  column-gap: 3rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.btn-jogo,.reset-btn{
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5rem;
+  color: #fff;
+}
+.btn-jogo i,.reset-btn i{
+  margin-right: 0.5rem;
+}
+.btn-jogo:nth-child(1){
+  background-color: #ff013c;
+}
+.btn-jogo:nth-child(2){
+  background-color: #2cc71e;
+}
+.btn-jogo:nth-child(3){
+  background-color: #1e45c7;
+}
+.reset-btn{
+  background-color: red;
+  position: absolute;
+  bottom: 2rem;
+  margin: auto;
+  left: 0;
+  right: 0;
+  font-size: 1em;
+  padding: 0.3rem 1.5rem;
+}
+.reset-btn i{
+  font-size: 0.8em;
+}
+
+
+/* FIM */
+.fim{
+  width: 100%;
+  min-height: 100vh;
+  background: #F8F005;
+  padding: 40vh 2rem 2rem 2rem;
+}
+.fim-wrap{
+  max-width: 50rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+.btn-inicio.alt{
+  width: fit-content;
+  padding: 0 2rem;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 20vh;
+}
+.fim-content{
+  background-color: #f8f0e1;
+  padding: 2rem;
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  color: #111111;
+}
+
+
+
+@media(max-width: 600px){
+  .jogo-content h1{
+    font-size: 2em;
+  }
+  .btns-wrap-jogo{
+    column-gap: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .btn-jogo{
+    width: max-content;
+    padding: 0.5rem 1.2rem;
+    font-size: 1em;
+  }
+  .jogo{
+    padding: 15vh 1rem 2rem 1rem;
+  }
+}
+@media(max-height: 425px){
+  .reset-btn{
+    display: none;
+  }
+  .fim{
+    padding: 25vh 2rem 2rem 2rem;
+  }
+  .btn-inicio.alt{
+    bottom: 6vh;
+  }
+}
+@media(max-width: 425px){
+  .instrucoes{
+    padding: 1rem;
+  }
+  .instrucoes h3{
+    font-size: 1em;
+  }
+  .inicio-btns-wrap{
+    align-items: center;
+  }
+  .link-inicio,.btn-inicio{
+    width: 13rem;
+    height: 3rem;
+    font-size: 24px;
+  }
+  .fim-content h1{
+    font-size: 1.2em;
+  }
+  .fim{
+    padding: 40vh 2rem 2rem 2rem;
+  }
+  }
+  @media(max-width: 370px){
+    .btn-jogo{
+      padding: 0.5rem 0.8rem;
+    }
+    .fim-content{
+      padding: 1rem;
+    }
+    .fim-content h1{
+      font-size: 1.1em;
+    }
+  }
+  @media(max-width: 340px){
+    .btn-jogo{
+      padding: 0.5rem 0.6rem;
+    }
+    .jogo-content h1{
+      font-size: 1.8em;
+    }
+    .btn-inicio.alt{
+      font-size: 1em;
+      padding: 0.3rem 2rem;
+    }
+  }
